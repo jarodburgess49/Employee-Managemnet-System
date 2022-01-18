@@ -2,7 +2,7 @@
 --
 TailorSoft Assignment
 
-Frontend - ReactJs
+Frontend - ReactJs, Redux
 
 Backend - Spring Boot 
 
