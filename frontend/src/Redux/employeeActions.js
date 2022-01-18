@@ -1,6 +1,6 @@
 import { ADD_EMPLOYEE_RECORD, UPDATE_EMPLOYEE_RECORD, DELETE_EMPLOYEE_RECORD } from "/contants";
 
-export const addEmployee = (id, firstname, lastname, email) => async (
+export const addEmployee = (employee) => async (
   dispatch,
   getState
 ) => {
@@ -12,7 +12,7 @@ export const addEmployee = (id, firstname, lastname, email) => async (
     };
     const { data } = await axios.post(
       `${server.BACKEND_API}/`,
-      { recordId, name, rollno, branch },
+      employee,
       config
     );
 

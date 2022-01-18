@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 
-import { addEmployee,updateEmployeeDetails } from "../actions/userActions";
+import { addEmployee, updateUserDetails } from "../actions/userActions";
 
 const EmployeeComponent = (id) => {
   const [firstname, setFirstname] = useState("");
@@ -16,7 +16,7 @@ const EmployeeComponent = (id) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-      dispatch(updateEmployeeDetails({ id: id, firstname,lastname ,email}));
+      dispatch(addEmployee({ id: id, name, email, password }));
     
   };
 
